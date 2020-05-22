@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:padding="40dp"
+        android:layout_margin="20dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/IV"
+            android:padding="10dp"
+            android:src="@drawable/pdf_image"/>
+
+        <TextView
+            android:layout_gravity="center|right"
+            android:padding="40dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/TV"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/dancing_script"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PDF File"
+            android:textSize="24dp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

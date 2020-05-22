@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+        android:elevation="30dp"
+        android:padding="30dp"
+        android:src="@drawable/acad"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/playVideo"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="296dp"
+        android:background="@color/white"
+        android:fontFamily="@font/dancing_script"
+        android:text="Play Video"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/showPdf"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="84dp"
+        android:background="@color/white"
+        android:fontFamily="@font/dancing_script"
+        android:gravity="top"
+        android:text="Show PDF"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playVideo"
+        tools:ignore="MissingConstraints,RtlCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>
