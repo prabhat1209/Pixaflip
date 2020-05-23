@@ -62,7 +62,7 @@ public class DisplayPdfActivity extends AppCompatActivity {
         //Log.i("Size", String.valueOf(list.size()));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new PDFAdapter(list,this);
+        adapter = new PDFAdapter(list,this, db);
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new PDFAdapter.ItemClickListener() {
