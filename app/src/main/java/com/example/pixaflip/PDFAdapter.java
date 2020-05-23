@@ -21,6 +21,8 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFAdapter.Holder> {
     private List<pdf> list;
     private LayoutInflater inflater;
     ItemClickListener itemClickListener;
+    
+    MyDbHelper db;
 
     public interface ItemClickListener {
         void onItemClick(int pos);
@@ -32,9 +34,10 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFAdapter.Holder> {
     }
 
 
-    public PDFAdapter(List<pdf> list, Context context) {
+    public PDFAdapter(List<pdf> list, Context context, MyDbHelper db) {
         this.list = list;
         inflater = LayoutInflater.from(context);
+        this.db = db;
     }
 
     @NonNull
@@ -48,8 +51,10 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-
+        
         holder.pdfName.setText(list.get(position).getPdfName());
+        if(db.isExist(list.get(position).getPdfName()))
+            holder.toggleButton.setChecked(true);
 
     }
 
